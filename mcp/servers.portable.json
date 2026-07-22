@@ -1,0 +1,69 @@
+{
+  "common": {
+    "memory": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-memory"]
+    },
+    "sequential_thinking": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
+    },
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"]
+    },
+    "fetch": {
+      "command": "uvx",
+      "args": ["mcp-server-fetch"]
+    },
+    "time": {
+      "command": "uvx",
+      "args": ["mcp-server-time", "--local-timezone", "${TIMEZONE:-Asia/Shanghai}"]
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp", "--browser", "chrome", "--headless"]
+    },
+    "chrome_devtools": {
+      "command": "npx",
+      "args": ["-y", "chrome-devtools-mcp", "--headless", "--isolated", "--no-usage-statistics", "--no-performance-crux"]
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "${HOME}", "${CODEX_HOME}", "${DOWNLOADS}"]
+    }
+  },
+  "optional": {
+    "git": {
+      "command": "uvx",
+      "args": ["mcp-server-git", "--repository", "${GIT_REPOSITORY}"]
+    },
+    "docker": {
+      "command": "npx",
+      "args": ["-y", "mcp-docker-server"]
+    },
+    "mysql": {
+      "command": "npx",
+      "args": ["-y", "@benborla29/mcp-server-mysql"],
+      "env": ["MYSQL_HOST", "MYSQL_PORT", "MYSQL_USER", "MYSQL_PASS", "MYSQL_DB"]
+    },
+    "postgres": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-postgres", "${POSTGRES_URL}"]
+    },
+    "redis": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-redis", "${REDIS_URL}"]
+    },
+    "ssh": {
+      "command": "npx",
+      "args": ["-y", "mcp-ssh-manager"],
+      "env": ["SSH_CONFIG_PATH"]
+    },
+    "feishu": {
+      "command": "npx",
+      "args": ["-y", "@larksuiteoapi/lark-mcp", "mcp", "-a", "${FEISHU_APP_ID}", "-s", "${FEISHU_APP_SECRET}", "-l", "zh"],
+      "env": ["FEISHU_APP_ID", "FEISHU_APP_SECRET"]
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "personal-skill-mcp",
+  "version": "0.1.0",
+  "description": "Personal Codex skills and portable MCP defaults.",
+  "author": {
+    "name": "Kelvin2334",
+    "url": "https://github.com/Kelvin2334"
+  },
+  "homepage": "https://github.com/Kelvin2334/skill_mcp_private",
+  "repository": "https://github.com/Kelvin2334/skill_mcp_private",
+  "license": "UNLICENSED",
+  "keywords": [
+    "codex",
+    "skills",
+    "mcp",
+    "personal"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Personal Skill MCP",
+    "shortDescription": "Personal Codex skills plus portable MCP presets.",
+    "longDescription": "A private bundle for installing the same Codex skills and MCP server defaults across machines. Secrets and machine-specific paths are intentionally excluded.",
+    "developerName": "Kelvin2334",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use my personal Codex skills",
+      "Install my MCP defaults on this machine",
+      "Sync local skills into the private repo"
+    ]
+  },
+  "mcpServers": "./.mcp.json"
+}

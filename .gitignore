@@ -1,0 +1,17 @@
+.env
+.env.*
+*.secret
+*.secret.*
+auth.json
+config.local.toml
+ssh-config.toml
+node_modules/
+.venv/
+__pycache__/
+*.log
+*.sqlite
+*.sqlite-*
+*.bak
+*.tmp
+.DS_Store
+Thumbs.db
