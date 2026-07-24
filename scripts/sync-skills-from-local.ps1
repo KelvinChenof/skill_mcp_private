@@ -17,4 +17,9 @@ Get-ChildItem -Path $SkillSource -Directory | Where-Object { $_.Name -ne ".syste
   Write-Host "Synced skill: $($_.Name)"
 }
 
+Get-ChildItem -Path $SkillTarget -Recurse -Force -File -Include ".coverage", "coverage-*.json" | ForEach-Object {
+  Remove-Item -LiteralPath $_.FullName -Force
+  Write-Host "Removed generated test artifact: $($_.FullName)"
+}
+
 Write-Host "Skill sync complete. Review git diff before committing."

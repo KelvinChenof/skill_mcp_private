@@ -13,5 +13,7 @@ __pycache__/
 *.sqlite-*
 *.bak
 *.tmp
+**/.coverage
+**/coverage-*.json
 .DS_Store
 Thumbs.db
