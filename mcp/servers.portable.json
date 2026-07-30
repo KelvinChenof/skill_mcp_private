@@ -28,6 +28,10 @@
       "command": "npx",
       "args": ["-y", "chrome-devtools-mcp", "--headless", "--isolated", "--no-usage-statistics", "--no-performance-crux"]
     },
+    "openaiDeveloperDocs": {
+      "type": "http",
+      "url": "https://developers.openai.com/mcp"
+    },
     "filesystem": {
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-filesystem", "${HOME}", "${CODEX_HOME}", "${DOWNLOADS}"]

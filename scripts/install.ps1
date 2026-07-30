@@ -45,6 +45,20 @@ function Add-Mcp {
   & codex @args
 }
 
+function Add-McpUrl {
+  param(
+    [string]$Name,
+    [string]$Url
+  )
+
+  $existing = & codex mcp get $Name 2>$null
+  if ($LASTEXITCODE -eq 0 -and $existing) {
+    & codex mcp remove $Name | Out-Null
+  }
+
+  & codex mcp add $Name --url $Url
+}
+
 Require-Command "codex"
 
 if (-not $SkipSkills) {
@@ -74,6 +88,7 @@ if (-not $SkipMcp) {
   Add-Mcp "time" @("uvx", "mcp-server-time", "--local-timezone", $Timezone)
   Add-Mcp "playwright" @("npx", "-y", "@playwright/mcp", "--browser", "chrome", "--headless")
   Add-Mcp "chrome_devtools" @("npx", "-y", "chrome-devtools-mcp", "--headless", "--isolated", "--no-usage-statistics", "--no-performance-crux")
+  Add-McpUrl "openaiDeveloperDocs" "https://developers.openai.com/mcp"
 
   if ($GitRepository) {
     Add-Mcp "git" @("uvx", "mcp-server-git", "--repository", $GitRepository)
