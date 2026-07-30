@@ -1,0 +1,176 @@
+{
+    "repo":  "mattpocock/skills",
+    "url":  "https://github.com/mattpocock/skills.git",
+    "ref":  "main",
+    "lastSyncedCommit":  "2ab958093e83e0ec752e6c1c5932da465bf23e0c",
+    "normalizeDisableModelInvocation":  true,
+    "skills":  [
+                   {
+                       "name":  "ask-matt",
+                       "path":  "skills/engineering/ask-matt"
+                   },
+                   {
+                       "name":  "batch-grill-me",
+                       "path":  "skills/in-progress/batch-grill-me"
+                   },
+                   {
+                       "name":  "claude-handoff",
+                       "path":  "skills/in-progress/claude-handoff"
+                   },
+                   {
+                       "name":  "codebase-design",
+                       "path":  "skills/engineering/codebase-design"
+                   },
+                   {
+                       "name":  "code-review",
+                       "path":  "skills/engineering/code-review"
+                   },
+                   {
+                       "name":  "design-an-interface",
+                       "path":  "skills/deprecated/design-an-interface"
+                   },
+                   {
+                       "name":  "diagnosing-bugs",
+                       "path":  "skills/engineering/diagnosing-bugs"
+                   },
+                   {
+                       "name":  "domain-modeling",
+                       "path":  "skills/engineering/domain-modeling"
+                   },
+                   {
+                       "name":  "edit-article",
+                       "path":  "skills/personal/edit-article"
+                   },
+                   {
+                       "name":  "git-guardrails-claude-code",
+                       "path":  "skills/misc/git-guardrails-claude-code"
+                   },
+                   {
+                       "name":  "grilling",
+                       "path":  "skills/productivity/grilling"
+                   },
+                   {
+                       "name":  "grill-me",
+                       "path":  "skills/productivity/grill-me"
+                   },
+                   {
+                       "name":  "grill-with-docs",
+                       "path":  "skills/engineering/grill-with-docs"
+                   },
+                   {
+                       "name":  "handoff",
+                       "path":  "skills/productivity/handoff"
+                   },
+                   {
+                       "name":  "implement",
+                       "path":  "skills/engineering/implement"
+                   },
+                   {
+                       "name":  "improve-codebase-architecture",
+                       "path":  "skills/engineering/improve-codebase-architecture"
+                   },
+                   {
+                       "name":  "loop-me",
+                       "path":  "skills/in-progress/loop-me"
+                   },
+                   {
+                       "name":  "migrate-to-shoehorn",
+                       "path":  "skills/misc/migrate-to-shoehorn"
+                   },
+                   {
+                       "name":  "obsidian-vault",
+                       "path":  "skills/personal/obsidian-vault"
+                   },
+                   {
+                       "name":  "prototype",
+                       "path":  "skills/engineering/prototype"
+                   },
+                   {
+                       "name":  "qa",
+                       "path":  "skills/deprecated/qa"
+                   },
+                   {
+                       "name":  "request-refactor-plan",
+                       "path":  "skills/deprecated/request-refactor-plan"
+                   },
+                   {
+                       "name":  "research",
+                       "path":  "skills/engineering/research"
+                   },
+                   {
+                       "name":  "resolving-merge-conflicts",
+                       "path":  "skills/engineering/resolving-merge-conflicts"
+                   },
+                   {
+                       "name":  "scaffold-exercises",
+                       "path":  "skills/misc/scaffold-exercises"
+                   },
+                   {
+                       "name":  "setup-matt-pocock-skills",
+                       "path":  "skills/engineering/setup-matt-pocock-skills"
+                   },
+                   {
+                       "name":  "setup-pre-commit",
+                       "path":  "skills/misc/setup-pre-commit"
+                   },
+                   {
+                       "name":  "setup-ts-deep-modules",
+                       "path":  "skills/in-progress/setup-ts-deep-modules"
+                   },
+                   {
+                       "name":  "tdd",
+                       "path":  "skills/engineering/tdd"
+                   },
+                   {
+                       "name":  "teach",
+                       "path":  "skills/productivity/teach"
+                   },
+                   {
+                       "name":  "to-questionnaire",
+                       "path":  "skills/in-progress/to-questionnaire"
+                   },
+                   {
+                       "name":  "to-spec",
+                       "path":  "skills/engineering/to-spec"
+                   },
+                   {
+                       "name":  "to-tickets",
+                       "path":  "skills/engineering/to-tickets"
+                   },
+                   {
+                       "name":  "triage",
+                       "path":  "skills/engineering/triage"
+                   },
+                   {
+                       "name":  "ubiquitous-language",
+                       "path":  "skills/deprecated/ubiquitous-language"
+                   },
+                   {
+                       "name":  "wayfinder",
+                       "path":  "skills/engineering/wayfinder"
+                   },
+                   {
+                       "name":  "wizard",
+                       "path":  "skills/in-progress/wizard"
+                   },
+                   {
+                       "name":  "writing-beats",
+                       "path":  "skills/in-progress/writing-beats"
+                   },
+                   {
+                       "name":  "writing-fragments",
+                       "path":  "skills/in-progress/writing-fragments"
+                   },
+                   {
+                       "name":  "writing-great-skills",
+                       "path":  "skills/productivity/writing-great-skills"
+                   },
+                   {
+                       "name":  "writing-shape",
+                       "path":  "skills/in-progress/writing-shape"
+                   }
+               ],
+    "skippedCollisions":  [
+
+                          ]
+}

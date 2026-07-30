@@ -1,7 +1,8 @@
 param(
   [string]$CodexHome = $(if ($env:CODEX_HOME) { $env:CODEX_HOME } else { "D:\.codex" }),
   [string]$Branch = "main",
-  [string]$CommitMessage = "chore: sync personal Codex skills and MCP"
+  [string]$CommitMessage = "chore: sync personal Codex skills and MCP",
+  [switch]$SyncMattPocock
 )
 
 $ErrorActionPreference = "Stop"
@@ -43,6 +44,13 @@ try {
   Invoke-Checked "git fetch" { git fetch origin $Branch }
   Invoke-Checked "git pull" { git pull --ff-only origin $Branch }
 
+  if ($SyncMattPocock) {
+    powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $PSScriptRoot "sync-mattpocock-skills.ps1") -CodexHome $CodexHome
+    if ($LASTEXITCODE -ne 0) {
+      throw "mattpocock/skills sync failed with exit code $LASTEXITCODE."
+    }
+  }
+
   powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $PSScriptRoot "sync-skills-from-local.ps1") -CodexHome $CodexHome
   if ($LASTEXITCODE -ne 0) {
     throw "Skill sync failed with exit code $LASTEXITCODE."
@@ -55,6 +63,8 @@ try {
     "scripts/install.ps1" `
     "scripts/sync-skills-from-local.ps1" `
     "scripts/sync-and-push.ps1" `
+    "scripts/sync-mattpocock-skills.ps1" `
+    "sources/mattpocock-skills.json" `
     "README.md" }
 
   & git diff --cached --quiet

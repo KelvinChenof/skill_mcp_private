@@ -8,8 +8,10 @@ Private repository for keeping the same Codex skills and MCP defaults available 
 - `plugins/personal-skill-mcp/.mcp.json`: portable plugin-level MCP defaults
 - `mcp/servers.portable.json`: full MCP reference manifest with common and optional servers
 - `scripts/install.ps1`: install skills and MCP servers on another Windows machine
+- `scripts/sync-mattpocock-skills.ps1`: refresh locally managed `mattpocock/skills` skills
 - `scripts/sync-skills-from-local.ps1`: refresh this repo from the current machine's local skills
 - `scripts/sync-and-push.ps1`: refresh skills, commit changed managed files, and push
+- `sources/mattpocock-skills.json`: upstream source manifest for managed `mattpocock/skills` skills
 
 ## What Is Not Stored
 
@@ -91,7 +93,13 @@ git push
 For the scheduled sync job, use:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\scripts\sync-and-push.ps1 -CodexHome "D:\.codex"
+powershell -ExecutionPolicy Bypass -File .\scripts\sync-and-push.ps1 -CodexHome "D:\.codex" -SyncMattPocock
 ```
 
 MCP entries are kept as portable manifests. Do not copy `D:\.codex\config.toml` into this repo; update `mcp/servers.portable.json`, `plugins/personal-skill-mcp/.mcp.json`, and `scripts/install.ps1` only after removing secrets and machine-specific paths.
+
+To check `mattpocock/skills` directly without committing:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\sync-mattpocock-skills.ps1 -CodexHome "D:\.codex" -DryRun
+```
