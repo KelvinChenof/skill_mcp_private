@@ -32,6 +32,10 @@
       "type": "http",
       "url": "https://developers.openai.com/mcp"
     },
+    "figma": {
+      "type": "http",
+      "url": "https://mcp.figma.com/mcp"
+    },
     "filesystem": {
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-filesystem", "${HOME}", "${CODEX_HOME}", "${DOWNLOADS}"]

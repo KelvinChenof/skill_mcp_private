@@ -89,6 +89,7 @@ if (-not $SkipMcp) {
   Add-Mcp "playwright" @("npx", "-y", "@playwright/mcp", "--browser", "chrome", "--headless")
   Add-Mcp "chrome_devtools" @("npx", "-y", "chrome-devtools-mcp", "--headless", "--isolated", "--no-usage-statistics", "--no-performance-crux")
   Add-McpUrl "openaiDeveloperDocs" "https://developers.openai.com/mcp"
+  Add-McpUrl "figma" "https://mcp.figma.com/mcp"
 
   if ($GitRepository) {
     Add-Mcp "git" @("uvx", "mcp-server-git", "--repository", $GitRepository)

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Batch Test After Implementation"
+  short_description: "Finish work before unified validation"
+  default_prompt: "Use $batch-testing-after-implementation to finish this task before one full validation pass."

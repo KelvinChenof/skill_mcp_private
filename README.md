@@ -66,6 +66,7 @@ powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1 -IncludeFeishu
 ```
 
 Start a new Codex task after installation so skills and MCP tools are reloaded.
+Remote MCP servers such as Figma may require signing in on the target machine after installation.
 
 ## Use As A Codex Plugin Marketplace
 
