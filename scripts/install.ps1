@@ -109,10 +109,17 @@ if (-not $SkipMcp) {
     }
     Add-Mcp "mysql" @("npx", "-y", "@benborla29/mcp-server-mysql") $mysqlEnv
 
-    $postgresUrl = if ($env:POSTGRES_URL) { $env:POSTGRES_URL } else { "postgresql://postgres:postgres@127.0.0.1:5432/postgres" }
-    $redisUrl = if ($env:REDIS_URL) { $env:REDIS_URL } else { "redis://127.0.0.1:6379" }
-    Add-Mcp "postgres" @("npx", "-y", "@modelcontextprotocol/server-postgres", $postgresUrl)
-    Add-Mcp "redis" @("npx", "-y", "@modelcontextprotocol/server-redis", $redisUrl)
+    if ($env:POSTGRES_URL) {
+      Add-Mcp "postgres" @("npx", "-y", "@modelcontextprotocol/server-postgres", $env:POSTGRES_URL)
+    } else {
+      Write-Warning "Skipping postgres MCP because POSTGRES_URL is not set."
+    }
+
+    if ($env:REDIS_URL) {
+      Add-Mcp "redis" @("npx", "-y", "@modelcontextprotocol/server-redis", $env:REDIS_URL)
+    } else {
+      Write-Warning "Skipping redis MCP because REDIS_URL is not set."
+    }
   }
 
   if ($IncludeSsh) {
